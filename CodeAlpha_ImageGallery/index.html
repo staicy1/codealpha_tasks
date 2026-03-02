@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery | CodeAlpha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 style="color:black">Image Gallery</h1>
+    <hr>
+
+    <div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('ocean')">Ocean</button>
+    <button onclick="filterImages('beauty')">Beauty</button>
+</div>
+
+
+    <div class="gallery">
+        <img src="images/img1.jpg"  data-category="ocean" onclick="openLightbox(0)">
+        <img src="images/img2.jpg" data-category="beauty"  onclick="openLightbox(1)">
+        <img src="images/img3.jpg" data-category="nature" onclick="openLightbox(2)">
+        <img src="images/img4.jpg" data-category="nature" onclick="openLightbox(3)">
+        <img src="images/img5.jpg"  data-category="ocean"onclick="openLightbox(4)">
+        <img src="images/img6.jpg"  data-category="ocean"onclick="openLightbox(5)">
+        <img src="images/img7.jpg"  data-category="ocean"onclick="openLightbox(6)">
+        <img src="images/img8.jpg"  data-category="beauty"onclick="openLightbox(7)">
+       
+
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()">×</span>
+        <button class="prev" onclick="changeImage(-1)">❮</button>
+        <img id="lightbox-img">
+        <button class="next" onclick="changeImage(1)">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
